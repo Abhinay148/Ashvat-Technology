@@ -4,8 +4,16 @@ import Footer from './Footer';
 import { FaArrowRight } from "react-icons/fa";
 import image from '../image/web.jpg';
 import image2 from '../image/app.jpg';
+import image8 from '../image/company.png';
+import image4 from '../image/port.png';
+import image5 from '../image/andr.jpg';
+import image6 from '../image/ios.jpg';
+import image7 from '../image/softw.jpg';
 import TeamMember from './TeamMember';
 import image3 from '../image/abhi.png';
+import image9 from '../image/tarun.jpg';
+import image10 from '../image/vvk.jpg';
+import image11 from '../image/him.jpg';
 
 const Home = () => {
     return (
@@ -13,7 +21,7 @@ const Home = () => {
             <Header />
             <div className='home'>
                 <div className='home-content'>
-                    <h1>Digitalaise Your Business</h1>
+                    <h1>Digitalize Your Business</h1>
                     <p>Empowering businesses with visionary technology and trailblazing software solutions.</p>
                     <p>Crafting digital experiences that transcend the ordinary, we redefine the web with bespoke websites and transformative tools tailored for content creators.</p>
                     <h4>
@@ -62,6 +70,45 @@ const Home = () => {
                 <div className='project-links'>
                         <h2>Check Out Our Projects <FaArrowRight style={{ verticalAlign: 'middle' }} /></h2>
                 </div>
+                {/* projects we work on */}
+                <div className="projects-container" id='project'>
+                    <h1 className="projects-heading">Projects We Work On</h1>
+                    <div className="projects-grid">
+                        <div className="project-card">
+                        <img src={image8} alt="Project 1" className="project-image" />
+                        <div className="project-content">
+                            <h2 className="project-title">Company's Portfolio</h2>
+                        </div>
+                        </div>
+                        <div className="project-card">
+                        <img src={image4} alt="Project 1" className="project-image" />
+                        <div className="project-content">
+                            <h2 className="project-title">Personal Portfolio</h2>
+                        </div>
+                        </div>
+                        <div className="project-card">
+                        <img src={image5} alt="Project 1" className="project-image" />
+                        <div className="project-content">
+                            <h2 className="project-title">Android Application</h2>
+                        </div>
+                        </div>
+                        <div className="project-card">
+                        <img src={image6} alt="Project 1" className="project-image" />
+                        <div className="project-content">
+                            <h2 className="project-title">IOS Applications</h2>
+                        </div>
+                        </div>
+                        <div className="project-card">
+                        <img src={image7} alt="Project 1" className="project-image" />
+                        <div className="project-content">
+                            <h2 className="project-title">Specific Task Application</h2>
+                        </div>
+                        </div>
+                        
+                        
+                        </div>
+                    </div>
+                {/* projects we work on */}
             </div>
             <div className='team'>
                 <h2>Our Team</h2>
@@ -72,17 +119,17 @@ const Home = () => {
                         designation="CEO & Founder"
                     />
                     <TeamMember
-                        image={image}
+                        image={image11}
                         name="Himanshu Mathpal"
                         designation="Senior Developer"
                     />
                     <TeamMember
-                        image={image}
+                        image={image9}
                         name="Tarun Singh"
                         designation="Full Stack Developer"
                     />
                     <TeamMember
-                        image={image}
+                        image={image10}
                         name="Vivek Jha"
                         designation="Backend Developer"
                     />

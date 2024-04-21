@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // Import useEffect
 import { IoMenu } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Header = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -48,11 +48,11 @@ const Header = () => {
                       {mobileMenuOpen ? <RxCross1 /> : <IoMenu />}
                   </div>
                   <ul className={`navbar-links ${isMobile && mobileMenuOpen ? 'active' : ''}`}>
-                      <li><Link to="home" smooth={true} duration={500} onClick={toggleMobileMenu}>Home</Link></li>
-                      <li><Link to="about" smooth={true} duration={500} onClick={toggleMobileMenu}>About</Link></li>
-                      <li><Link to="portfolio" smooth={true} duration={500} onClick={toggleMobileMenu}>Portfolio</Link></li>
-                      <li><Link to="project" smooth={true} duration={500} onClick={toggleMobileMenu}>Projects</Link></li>
-                      <li><Link to="contact" smooth={true} duration={500} onClick={toggleMobileMenu}>Contact Us</Link></li>
+                      <li><Link to="/" onClick={toggleMobileMenu}>Home</Link></li>
+                      <li><Link to="/about" onClick={toggleMobileMenu}>About</Link></li>
+                      <li><Link to="/portfolio" onClick={toggleMobileMenu}>Portfolio</Link></li>
+                      <li><Link to="/careers" onClick={toggleMobileMenu}>Careers</Link></li>
+                      <li><Link to="/contact" onClick={toggleMobileMenu}>Contact Us</Link></li>
                   </ul>
               </div>
           </nav>
