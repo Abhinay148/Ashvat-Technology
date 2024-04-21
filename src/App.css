@@ -274,16 +274,6 @@
   color: #fff; /* Text color */
 }
 
-
-
-/* Media queries */
-
-@media (max-width: 360px) {
-  .project-card {
-    width: calc(100% - 20px); /* One card per row */
-  }
-}
-
 /* Assuming the TeamMember component is styled within Home.css */
 
 .team {
@@ -501,6 +491,20 @@
   .how {
     flex-direction: column; /* Change to column layout on smaller screens */
     align-items: center; /* Center items vertically */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: calc(100% - 20px); /* Two cards per row */
+  }
+  .home-content h1{
+    padding: 3%;
+    margin: 5px;
+    font-size: 40px;
+  }
+  .home-content p {
+    font-size: 1.2rem;
   }
 }
 

@@ -55,7 +55,7 @@ const About = () =>{
                 </div>
                 <div className="ceo-quote">
                     <blockquote>
-                        Don't wait for other's to give you dose, always be in overdose.
+                        "Don't wait for other's to give you dose, always be in overdose."
                     </blockquote>
                     <h2>CEO - Abhinay Mishra</h2>
                 </div>
