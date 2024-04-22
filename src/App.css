@@ -170,13 +170,19 @@
     padding: 5px 20px;
 }
 .footer-content {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center; /* Set default color to white */
 }
-.footer-content h5:not(:last-child) {
-    margin-right: 20px; 
+.footer-content a{
+  cursor: pointer;
+  transition: color 0.3s; /* Add transition for smooth color change */
+  margin-right: 20px; /* Add spacing between links */
+  color: white;
 }
+.footer-content a:hover {
+  color: blue; /* Change color on hover */
+}
+
 .social-icons {
     cursor: pointer;
     display: flex;
@@ -325,7 +331,8 @@
 
 
 .contact {
-  background: linear-gradient(90.21deg, #AA367C 111.58%, #4A2FBD -5.91%);
+  background: linear-gradient(to bottom, black, gray);
+  color: white;
   padding: 10px 0 20px 0;
   overflow: hidden;
 }
@@ -441,6 +448,9 @@
   .footer{
       flex-direction: column;
   }
+  .social-icons{
+    margin-bottom: 5px;
+  }
   .fullscreen-video{
     background: black;
     object-fit: contain;
@@ -492,6 +502,9 @@
     flex-direction: column; /* Change to column layout on smaller screens */
     align-items: center; /* Center items vertically */
   }
+  .dibba{
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -508,4 +521,88 @@
   }
 }
 
+.privacy {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.privacy h2{
+  margin-top: 5%;
+  font-size: 36px;
+}
+.privacy h3{
+  margin: 0 5% 0 20%;
+  text-align: justify;
+  font-size: 20px;
+}
+.privacy p{
+  margin: 0 5% 0 20%;
+  text-align: justify;
+  font-size: 20px;
+}
+.privacy-list {
+  font-size: 20px;
 
+  text-align: left;
+}
+
+.privacy-list ul {
+  padding-left: 0;
+}
+
+.privacy-list li {
+  margin: 0 5% 0 25%;
+}
+
+.careers{
+  display: flex;
+  flex-direction: column ;
+  color: black;
+  margin-bottom: 5%;
+}
+.careers h2{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 36px;
+}
+.careers p{
+  font-size: 20px;
+  margin:0 20% 0 20%;
+  text-align: justify;
+}
+
+.dibba{
+  background: black;
+  color: white;
+  display: flex;
+}
+.bo{
+  margin: 50px;
+}
+.dibba img{
+  height: auto;
+  width: 100%;
+}
+.box h2{
+  font-size: 26px;
+  margin-top: 5%;
+  text-align: center;
+}
+.box p{
+  font-size: 20px;
+  margin: 0 10% 10% 10%;
+  text-align: justify;
+}
+
+.help h2{
+  text-align: center;
+  font-size: 36px;
+}
+.help p{
+  font-size: 20px;
+  margin: 0 10% 0 10%;
+  text-align: justify;
+}
+.position {
+  margin-top: 5%;
+  text-align: center;
+}

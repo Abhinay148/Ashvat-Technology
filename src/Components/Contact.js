@@ -4,8 +4,12 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Header from './Header';
 import Image from '../image/touch.jpg';
+import Image1 from '../image/map.svg';
 import Footer from "./Footer";
-
+import '../css/contact.css';
+import { FaLocationDot } from "react-icons/fa6";
+import { MdAddCall } from "react-icons/md";
+import { IoMdMail } from "react-icons/io";
 
 const Contact = () => {
   const formInitialDetails = {
@@ -49,6 +53,12 @@ const Contact = () => {
   return (
     <>
     <Header />
+    <div className="content">
+      <h2>Let's Build Something Great</h2>
+      <p>Seeking a partner to help conceptualize, refine, execute, and/or support your digital strategy? We’re always looking for new opportunities to apply our white glove service, craftsmanship, and creativity.</p>
+      <p>Looking to join our team? Check out our careers page.</p>
+      <p>For press inquiries, email mishraabhinay814@gmail.com.</p>
+    </div>
     <section className="contact" id="connect">
       <Container>
         <h2>Let's Connect</h2>
@@ -97,6 +107,37 @@ const Contact = () => {
         </Row>
       </Container>
     </section>
+    <div className="location">
+      <h2>Where is Ashvat Technology?</h2>
+      <div className="address">
+        <div className="address-box">
+        <div className="address-data">
+          <div><FaLocationDot /></div>
+          <div>
+            <h3>Address</h3>
+            <p>159 A Jawahar Nagar Near Police Line</p>
+          </div>
+        </div>
+        <div className="address-data">
+          <div><MdAddCall /></div>
+          <div>
+            <h3>Call Us</h3>
+            <p>+91-9996848046</p>
+          </div>
+        </div>
+        <div className="address-data">
+          <div><IoMdMail /></div>
+          <div>
+            <h3>Mail Us At</h3>
+            <p>mishraabhinay814@gmail.com</p>
+          </div>
+        </div>
+        </div>
+        <div className="map">
+            <img src={Image1} alt="map" />
+        </div>
+      </div>
+    </div>
     <Footer />
     </>
   )

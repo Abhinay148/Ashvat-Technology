@@ -7,6 +7,7 @@ import About from './Components/About';
 import Portfolio from './Components/Portfolio';
 import Contact from './Components/Contact';
 import Careers from './Components/Careers';
+import Privacy from './Components/Privacy';
 const App = () => {
     const [videoEnded, setVideoEnded] = useState(false);
 
@@ -25,6 +26,7 @@ const App = () => {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
             </Routes>
           )}
         </div>
