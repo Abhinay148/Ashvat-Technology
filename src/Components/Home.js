@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import { FaArrowRight } from "react-icons/fa";
@@ -15,7 +16,13 @@ import image9 from '../image/tarun.jpg';
 import image10 from '../image/vvk.jpg';
 import image11 from '../image/him.jpg';
 
+
 const Home = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top when component mounts
+    }, [location.pathname]);
     return (
         <div>
             <Header />
@@ -24,9 +31,9 @@ const Home = () => {
                     <h1>Digitalize Your Business</h1>
                     <p>Empowering businesses with visionary technology and trailblazing software solutions.</p>
                     <p>Crafting digital experiences that transcend the ordinary, we redefine the web with bespoke websites and transformative tools tailored for content creators.</p>
-                    <h4>
+                    <Link to="/contact"><h4>
                         Get Started Now <FaArrowRight style={{ verticalAlign: 'middle' }} />
-                    </h4>
+                    </h4></Link>
                 </div>
             </div>
             <div className='services-container'>
@@ -68,7 +75,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='project-links'>
-                        <h2>Check Out Our Projects <FaArrowRight style={{ verticalAlign: 'middle' }} /></h2>
+                       <Link to="/portfolio"> <h2>Check Out Our Projects <FaArrowRight style={{ verticalAlign: 'middle' }} /></h2></Link>
                 </div>
                 {/* projects we work on */}
                 <div className="projects-container" id='project'>
@@ -143,8 +150,8 @@ const Home = () => {
             <div className='bottom'>
                 <h3>Let's build something great</h3>
                 <div>
-                <button>Hire Us</button>
-                <button>Apply</button>
+                <Link to="/contact"><button>Hire Us</button></Link>
+                <Link to="/careers"><button>Apply</button></Link>
                 </div>
             </div>
             <Footer />

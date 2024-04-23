@@ -31,7 +31,9 @@
     cursor: pointer;
     margin-right: 1rem;
   }
-
+  .navbar-links li a:hover{
+    text-decoration: underline;
+  }
   .menu-icon {
     display: none;
     margin: 5%;
@@ -162,37 +164,44 @@
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: black;
-    color: whitesmoke;
-    padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 5px 20px;
 }
+
 .footer-content {
   display: flex;
-  align-items: center; /* Set default color to white */
+  align-items: center;
 }
-.footer-content a{
+
+.footer-content a {
   cursor: pointer;
   transition: color 0.3s; /* Add transition for smooth color change */
-  margin-right: 20px; /* Add spacing between links */
+  margin-right: 20px;
   color: white;
 }
-.footer-content a:hover {
-  color: blue; /* Change color on hover */
-}
 
+.footer-content a:hover{
+  color: burlywood;
+}
 .social-icons {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-.social-icons > * {
-    margin-right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
-/*projects*/
+.social-icons > * {
+  margin-right: 20px;
+}
+.social-icons a{
+  color: white;
+}
+.social-icons a:hover{
+  color: burlywood;
+}
 .project{
   background: black;
   color: white;
@@ -497,10 +506,6 @@
   }
   .projects-heading{
     margin-top: 0;
-  }
-  .how {
-    flex-direction: column; /* Change to column layout on smaller screens */
-    align-items: center; /* Center items vertically */
   }
   .dibba{
     flex-direction: column;

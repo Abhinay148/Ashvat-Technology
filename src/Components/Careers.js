@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from './Footer';
 import image from '../image/Careers-1.png';
 const Careers = () =>{
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top when component mounts
+    }, [location.pathname]);
     return (
         <>
         <Header />
@@ -57,8 +63,8 @@ const Careers = () =>{
         <div className='bottom'>
                 <h3>Let's build something great</h3>
                 <div>
-                <button>Hire Us</button>
-                <button>Apply</button>
+                <Link to="/contact"><button>Hire Us</button></Link>
+                <Link to="/careers"><button>Apply</button></Link>
                 </div>
             </div>
         <Footer />

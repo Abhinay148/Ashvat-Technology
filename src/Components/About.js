@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Header from './Header';
 import '../css/about.css';
 import image from '../image/strategy.jpg';
@@ -11,6 +12,11 @@ import image10 from '../image/vvk.jpg';
 import image11 from '../image/him.jpg';
 import Footer from './Footer';
 const About = () =>{
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top when component mounts
+    }, [location.pathname]);
     return(
         <div className='about'>
             <Header />
@@ -94,8 +100,8 @@ const About = () =>{
             <div className='bottom'>
                 <h3>Finely crafted websites & tools that make the web better</h3>
                 <div>
-                <button>Hire Us</button>
-                <button>Apply</button>
+                <Link to="/contact"><button>Hire Us</button></Link>
+                <Link to="/careers"><button>Apply</button></Link>
                 </div>
             </div>
             <Footer />
